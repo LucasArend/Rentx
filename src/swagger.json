@@ -1,0 +1,141 @@
+{
+    "openapi": "3.0.0",
+    "info":{
+        "title": "RentX Documentation",
+        "Description": "This is an API Rent",
+        "version": "1.0.0",
+        "contact": {
+            "email": "lucas.m.arend@gmail.com"
+        }
+    },
+    "paths":{
+        "/categories":{
+            "post":{
+                "tags": ["Category"],
+                "summary": "Create a new category",
+                "description": "Create a new description",
+                "requestBody": {
+                    "content": {
+                        "aplication/json":{
+                            "schema":{
+                                "type": "object",
+                                "properties":{
+                                    "name":{
+                                        "type":"string"
+                                    },
+                                    "description":{
+                                        "type":"string"
+                                    }
+                                },
+                                "example":{
+                                    "name":"Category name sample",
+                                    "description":"Category description sample"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "201":{
+                        "description": "created"
+                    },
+                    "500":{
+                        "description":"Category alredy exists"
+                    }
+                }
+            },
+            "get":{
+                "tags":["Category"],
+                "summary":"List all categories",
+                "description": "List all categories",
+                "responses":{
+                    "200":{
+                        "description":"Sucess",
+                        "content":{
+                            "application/json":{
+                                "schema":{
+                                    "type":"array",
+                                    "items":{
+                                        "type":"object",
+                                        "properties":{
+                                            "name":{
+                                                "type":"string"
+                                            },
+                                            "description":{
+                                                "type":"string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/categories/import":{
+            "post":{
+                "tags":["Category"],
+                "summary": "Upload a new category",
+                "description": "Upload a new category",
+                "requestBody":{
+                    "content":{
+                        "multipart/form-data":{
+                            "schema":{
+                                "type":"object",
+                                "properties":{
+                                    "file":{
+                                        "type":"string",
+                                        "format":"binary"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "201":{
+                        "description":"Created"
+                    }
+                }
+            }
+        },
+        "/specification":{
+            "post":{
+                "tags": ["Specification"],
+                "summary":"Create a specification",
+                "description":"Create a new expecification",
+                "requestBody":{
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "$ref": "#/definitions/Specification"
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "201":{
+                        "description": "Created"
+                    },
+                    "500":{
+                        "description":"Specification alredy exists!"
+                    }
+                }
+            }
+        }
+    },
+    "definitions":{
+        "Specification":{
+            "type":"object",
+            "properties":{
+                "name":{
+                    "type":"string"
+                },
+                "description":{
+                    "type":"string"
+                }
+            }
+        }
+    }
+}
