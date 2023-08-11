@@ -8,7 +8,7 @@ Deve ser possivel cadastrar um novo carro
 **RN**
 Não deve ser possivel cadastar um dcarro com uma placa ja existente.
 O carro deve ser cadastrado com disponibilidade por padrão.
-O usuário responsavel pelo cadastro deve ser um usuario administrador.
+*O usuário responsavel pelo cadastro deve ser um usuario administrador.
 
 
 # Listagem de carro
@@ -27,8 +27,7 @@ O usuário não precisar estar logado no sistema
 
 **RF**
 Deve ser possivel cadastrar uma especificação para um carro.
-Deve ser possiovel listar todas as especificaçoes.
-Deve ser possivel listar todos os carros.
+
 
 **RN**
 Não deve ser possivel cadastrar uma especificação para um carro não cadastrado.
