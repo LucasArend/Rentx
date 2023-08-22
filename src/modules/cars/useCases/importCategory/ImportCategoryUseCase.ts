@@ -26,7 +26,7 @@ class ImportCategoryUseCase{
 
             stream.pipe(parseFile)
 
-            parseFile.on("data", async(line: string) => {
+            parseFile.on("data", async(line) => {
                 const [name, description] = line;
                 categories.push({
                     name,
