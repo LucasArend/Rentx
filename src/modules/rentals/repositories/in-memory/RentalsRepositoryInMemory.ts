@@ -3,6 +3,7 @@ import { IRentalsRepository } from "../IRentalsRepository";
 import { ICreateRentalDTO } from "@modules/rentals/dtos/ICreateRentalDTO";
 
 class RentalsRepositoryInMemory implements IRentalsRepository {
+
     rentals: Rental[] = []
     
     async findOpenRentalByCar(car_id: string): Promise<Rental> {
@@ -26,6 +27,10 @@ class RentalsRepositoryInMemory implements IRentalsRepository {
         this.rentals.push(rental)
 
         return rental;
+    }
+
+    async findById(id: string): Promise<Rental> {
+        return this.rentals.find(rental => rental.car_id === id)
     }
 }
 
