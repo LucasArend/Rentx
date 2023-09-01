@@ -29,7 +29,7 @@ class AuthenticateUserUseCase{
         const user = await this.usersRepository.findByEmail(email);
 
         if (!user){
-            throw new AppError("email or password incorrect!")
+            throw new AppError("Email or password incorrect!")
         }
 
         const passwordMatch = await compare(password, user.password);
