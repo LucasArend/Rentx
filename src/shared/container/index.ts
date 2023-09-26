@@ -11,8 +11,7 @@ import { ICarsImagesRepository } from "@modules/cars/repositories/ICarsImagesRep
 import { CarsImagesRepository } from "@modules/cars/infra/typeorm/repositories/CarsImagesRepository"
 import { IRentalsRepository } from "@modules/rentals/repositories/IRentalsRepository"
 import { RentalsRepository } from "@modules/rentals/infra/typeorm/repositories/RentalsRepository"
-import "@shared/container/providers/DateProvider"
-import "@shared/container/providers/MailProvider"
+import "@shared/container/providers"
 import { IUsersTokensRepository } from "@modules/accounts/repositories/IUsersTokenRepository"
 import { UsersTokensRepository } from "@modules/accounts/infra/typeorm/repositories/UsersTokensRepository"
 
