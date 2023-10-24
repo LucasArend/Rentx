@@ -36,5 +36,5 @@ npm install
 yarn dev
 ```
 
-## :syrinx: Testing Evidence
+## Testing Evidence
 In this application, **Unit Tests and Integration Tests** are covered using the **Jest** testing framework, aiming to guarantee the correct functioning of the functionalities and maintain the application in accordance with the requirements. <br/>
