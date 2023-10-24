@@ -36,9 +36,5 @@ npm install
 yarn dev
 ```
 
-## :floppy_disk: Using the Application
-To make **requests** in the application, **Insomnia** or **Postman** must be used, importing the [file](insomnia_requests) of requests already existing in this directory.
-Pay attention to the necessary parameters in **Header**.
-
 ## :syrinx: Testing Evidence
 In this application, **Unit Tests and Integration Tests** are covered using the **Jest** testing framework, aiming to guarantee the correct functioning of the functionalities and maintain the application in accordance with the requirements. <br/>
