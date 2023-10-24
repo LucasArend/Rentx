@@ -19,7 +19,7 @@ The Requirements and Business Rules reference document can be accessed through t
 ## 💻 Installation, Dependencies and Running the Project
 **1.** Clone this repository
 ```
-git clone git@github.com:Ygohr/rentx-ignite-nodejs.git
+git clone git@github.com:LucasArend/Rentx.git
 ```
 **2.** Go to the project root directory
 ```
